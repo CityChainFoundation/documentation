@@ -1,0 +1,85 @@
+City Chain: Technical White Paper
+-----------------------
+
+**April 21, 2018**
+
+Our technical whitepaper, is our Software Architecture Document. This is a living document that is updated as implementation is completed, and as the architecture and implementation changes.
+
+**ABSTRACT:** City Chain is a new blockchain and platform, Smart City Platform, that has the purpose of making the technology accessible and useable by everyone. Cities and citizens will be able to use the City Chain to improve how we communicate, socialize, trade and manage our assets (both physical and digital). In addition, it will be possible to reduce costs/overhead for both citizens and cities.
+
+**DISCLAIMER:** This City Chain Technical White Paper is for discussion and information purposes only. The information contained herein is subject to change. No part of this draft document is legally binding or enforceable. City Chain Foundation and City Chain developers does not guarantee the accuracy of or the conclusions reached in this white paper, and this white paper is provided “as is”. City Chain Foundation and City Chain developers does not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or noninfringement; (ii) that the contents of this white paper are free from error; and (iii) that such contents will not infringe third-party rights. City Chain Foundation, City Chain developers and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this white paper or any of the content contained herein, even if advised of the possibility of such damages. In no event will City Chain Foundation, City Chain developers or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this white paper or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.
+
+- [Background](#background)
+- [What does it solve](#what-does-it-solve)
+- [Consensus Algorithm \(PoS\)](#consensus-algorithm-pos)
+- [Accounts and identities](#accounts)
+  * [Identities](#identities)
+- [Payments](#payments)
+  * [Send by e-mail](#send-by-email)
+  * [Send by SMS](#send-by-sms)
+  * [Send by NFC](#send-by-nfc)
+
+# Background
+
+The background for City Chain started with the planning and development of Norway's first private city, Liberstad. As we started working on the development of the city, we realize that there are some missing pieces in the blockchain-space and there are ways to optimize how cities operates, and how citizens interact with each other and their cities.
+
+# What does it solve
+We saw that there was a technical hurdle to get the average individual into the ideas, concepts and usage of crypto-currencies. We also quickly learnt that cities are still far behind in the utilization and development of blockchain solutions, so we had to make our own.
+
+For global widespread usage of blockchain technology, it has to become the foundation and the prefered means of transactions for the majority of people. To achieve this, City Chain will develop solutions that improve and enable:
+
+- Merchants to quickly and easily accept crypto-currencies as a payment method.
+- Citizens to quickly and easily perform payments to friends, family, associates and merchants.
+    * Payments should be possible using e-mail (P2M/P2MPH), SMS (P2PN/P2SMS), NFC, and using contact list without knowing, sharing or pasting any addresses.
+    * Perform payments with on-the-fly currency conversion.
+- Full overview through a hub of investements, manage assets (digital and physical).
+- Manage certifications, uploading third party certificates and signing them for digital verification.
+- Property registery with insight into owned land.
+- ... and a lot more, please refer to the [website](https://city-chain.org/) for more details.
+
+# Consensus Algorithm (PoS)
+City Chain will utilize Proof-of-Stake as oppose to Proof-of-Work (Bitcoin). We do this for a number of reasons:
+
+* Reduce the demand for electric energy and hardware investements for stakers ("miners").
+* Deterministic block interval.
+* Avoid competition with Bitcoin and other blockchains for the available PoW-hashpower.
+
+City Chain will use version 3 of PoS, possibly with some modifications. City Chain commits to keep investigating and following the development of PoS consensus algorithms and perform upgrades and modifications in the future. This might result in soft- and/or hard-forks. Modifications to the PoS algorithms will be done to ensure the stability, safety and security of the blockchain-network.
+
+# Accounts
+
+Accounts on the City Chain and Smart City Platform, is the same as most blockchains today. By relying on a 12 or 24 word mnemonic which will act as the seed for derived private/public key pairs, you can access all your data, coins and information.
+
+# Identities
+
+The platform allows anyone to create their own identity and be that, or any other of multiple identities, in all interactions on the platform and by commerce both online and in stores.
+
+City Chain will allow anyone to create their new identities and become those identities, and not rely on the name and identity created at birth.
+
+# Payments
+
+Performing payments on the platform will be possible in as many ways and forms as possible, to increase adoption and ussage. We will be implementing some innovative ideas such as sending funds by e-mail to new users.
+
+## Send by e-mail
+
+This is a very interesting idea, and the concept is that from within the City Chain wallet, or the City Hub, a user should be able to send funds by only knowing their e-mail address. When sending by e-mail, it should be possible to add a PIN/password as an additional security factor, but shouldn't be a requirement for smaller payments.
+
+When a person receives the funds by e-mail, they will be welcomed with easy to follow instructions on how to get started with City Chain and how to transfer the funds to their newly created accounts.
+
+If a new user is created, and their e-mail address is added to the identity created, friends, family and contacts will in the future be able to perform transfers directly without going through e-mail, which is less secure.
+
+We are consider two methods, P2M ("Pay to e-Mail") and P2MPH ("Pay To e-Mail Public Hash"), where the form is using the contact registry, while the second is more of an e-mail based banking, similar to P2SMS.
+
+## Send by SMS
+
+P2PN and P2SMS are two methods we want to implement for sending funds by SMS. 
+
+The first one is "Pay To Phone Number", which is relying on the platform contact registry to find the address of a person who is either in the contact registry of the person sending funds, or to someone who has choosen to publicly expose some of their contact information.
+
+The second payment method, "Pay To SMS Public Key Hash", is method to perform payments over SMS, which is a form of banking service through SMS, where the user doesn't need to be using any other part of the platform.
+
+## Send by NFC
+
+We want to add NFC payment support for our mobile wallet app. Security is important, so this will likely be implemented with payment limit over NFC with a separate funding address where user can pick the maximum limit. Auto-refund of NFC addresses is something to look into if possible to do.
+
+NFC payments should be possible between two mobile users, and between consumer and merchant that uses an City Chain compatible PoS (Point-of-Sale) terminal.
