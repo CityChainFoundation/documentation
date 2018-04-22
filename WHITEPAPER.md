@@ -18,6 +18,18 @@ Our technical whitepaper, is our Software Architecture Document. This is a livin
   * [Send by e-mail](#send-by-email)
   * [Send by SMS](#send-by-sms)
   * [Send by NFC](#send-by-nfc)
+- [Wallets](#wallets)
+- [City Hub](#city-hub)
+  * [Secure Community](#secure-community)
+  * [Contacts](#contacts)
+  * [Merchants](#merchants)
+  * [Voting Framework](#voting-framework)
+  * [Property Registry](#property-registry)
+  * [Vehicle Registry](#vehicle-registry)
+  * [Insurance](#insurance)
+  * [\(Smart\) Contracts](#smart-contracts)
+  * [Subscriptions](#subscriptions)
+  * [Certifications](#certifications)
 
 # Background
 
@@ -56,6 +68,14 @@ The platform allows anyone to create their own identity and be that, or any othe
 
 City Chain will allow anyone to create their new identities and become those identities, and not rely on the name and identity created at birth.
 
+You are the source of your identities, and how and what you identity as, is up to you. If you want to change your name that you are using for trades and interactions with anyone, that is available to you. You can choose to have a single identity, or multiple.
+
+As you interact with others through the Smart City Platform, your identities will build up trust. Similar to how trust is important in a human society today, it will be even more important in the digital space going forward.
+
+We plan to support the [Decentralized Identifiers](https://w3c-ccg.github.io/did-spec/) (DIDs) specification, including implementation of Universal Resolver, Universal Registrar and Identity Hubs. By implementing these open specifications, you can potentially use your identity on the City Chain, to authenticate across multiple desentralized blockchains and systems.
+
+Integration with other blockchains are planned for the identity framework, including Keybase.io.
+
 # Payments
 
 Performing payments on the platform will be possible in as many ways and forms as possible, to increase adoption and ussage. We will be implementing some innovative ideas such as sending funds by e-mail to new users.
@@ -83,3 +103,103 @@ The second payment method, "Pay To SMS Public Key Hash", is method to perform pa
 We want to add NFC payment support for our mobile wallet app. Security is important, so this will likely be implemented with payment limit over NFC with a separate funding address where user can pick the maximum limit. Auto-refund of NFC addresses is something to look into if possible to do.
 
 NFC payments should be possible between two mobile users, and between consumer and merchant that uses an City Chain compatible PoS (Point-of-Sale) terminal.
+
+# Wallets
+
+There will be a few rich wallet apps developed for City Chain, and they will all be based on HTML-technologies for UX. This ensures a coherent user experience across the various apps and services on the platform.
+
+Technologies: Angular
+
+The wallets will all carry the same name, "City Wallet" (or City Chain/City Coin Wallet) with what edition in parentheses of the name.
+
+City Wallet (Web) - Available through the City Hub interface.  
+City Wallet (Mobile) - Android/iOS (SPV) client, no staking support.   
+City Wallet (Desktop) - Linux/Windows/Mac, full node software with UI that supports staking (PoS).  
+City Wallet (Daemon) - Backend REST service, full node software.  
+
+These wallet apps will be user friendly and give users the basic needs to perform transactions and other related tasks. The full set of City Chain and Smart City Platform functionality, is accessible through the City Hub (website and app).
+
+# City Hub
+
+The City Hub is the one-stop-app that citizens, merchants and others can get an overview of everything related to their data on the City Chain and the Smart City Platform.
+
+It will be built on an HTML-based frontend, and be built on Angular.
+
+We might consider releasing the City Hub as both a hosted web app, embedded app (App Stores), full node with UI and daemon.
+
+A user who runs the full node edition of City Hub, will then be able to earn some fees from sharing a configureable amount of disk storage for encrypted data on the Smart City Platform.
+
+## Secure Community
+
+We believe it is important for citizens to have the ability to communicate freely and entirely without anyone being able to listen inn on conversations. This can be conversations between medical doctors and patiens, or between a citizen and municipality, between friends and family, or any other mode of communication that might take place in the modern city life.
+
+Today a lot of this communication happens through e-mail, social media and custom solutions, especially for medical and government communication. Often are these hosted by global corporations that citizens have little to no insight into how they store and use data.
+
+The secure community on City Chain, is a solution that does complete end-to-end encryption with no ability for anyone to "listen in" on the conversations.
+
+To do this, this functionality relies on modern technologies available in the latest web browsers. This functionality will only be supports on the latest and most secure browsers.
+
+There is one importan way the secure community on City Chain is very different from every other encrypted and secure communication solution, and that is that the information is by default never stored on any other computer or server than those who are members. By paying a small fee, a community can use full nodes to store encrypted archieves of communities.
+
+##Contacts
+
+One of today's biggest hurdles for crypto-currencies is the lack of a contact register where a user can easily send funds to either people who are already in their address books, or to other that choose to publicly make their information available.
+
+The contact registry will obviously be a feature on the Smart City Platform that gives citizens full control of what data they want to share, and how it is shared.
+
+## Merchants
+
+Merchants is one of the most important part of City Chain and crypto-currencies in general. Without merchants that are willing to accept crypto-currency, then most users would not have a way of spending their digital money.
+
+City Chain want to deliver complete solutions to merchants that are easy to get started.
+
+The merchant framework on the platform is a very important piece of the whole. The platform will enable existing merchants to improve their sales and customer experiences, but the platform will also enable just about anyone, to become a merchant that sells goods and services, both online and offline in the world.
+
+Stability is often important for a merchant, so the framework will support the ability to receive payment in the currency of choice by the merchant. If you want to have a local fiat currency, you can do so. If you want a mix of currencies, that is possible too.
+
+Integrations with existing webshop frameworks will be added, allowing merchants to easily integrate into the Smart City Platform, while continue to use existing software for online trading.
+
+Merchant registry will be part of the merchant framework, and allow citizens to discover the merchants that are available in various cities. These have metadata registered informing citizens what services are provided, and how payments can be done. This enables you as a citizen, to pick providers that use modern technologies such as crypto-currencies, and which merchant that integrates into the Smart City Platform. This enables you to have a more detailed transaction history, than what you otherwise would have.
+
+## Voting Framework
+
+Humans often have a need to have their voice heard. Part of that, is the ability to vote on issues of concern. As either a citizen, or employee, we want to feel we have an impact on major decisions being made.
+
+Part of the Smart City Platform, will be the voting framework, which will enable anyone to create voting polls, that will be both transparent, secure and anonymous (if needed). You as the user of this service, can set and configure how you want to a voting to be executed.
+
+The voting framework will be used by the Liberstad Incubator Program (LIP), to allow investors to vote on suggested applications to the incubator program. It will also be used by the City Chain Foundation, allowing individuals who hold City Coins to vote on issues, suggestions and more.
+
+## Property Registery
+
+Property registry built on blockchain for property registrations will be part of the Smart City Platform, likely through integration with other existing blockchains built for the specific purpose of property registrations.
+
+There are already governments that have started using blockchain for property registrations, and what is important on the Smart City Platform, is for citizens to be able to see their properties and all the details that belongs to it.
+
+## Vehicle Registry
+
+As an owner of vehicles, you will be able to register your vehicles on the City Hub. Integration with either/or both the VINchain and carVertical will ensure that you, have access too all the relevant details and history of your vehicles.
+
+## Insurance
+
+Insurance is an important part of a modern society, helping individuals, families and business survive the unforseen.
+
+There are existing established and under development, insurance-platforms on blockchain technologies. The Smart City Platform will be built with integrations into existing insurance blockchain platforms, allowing citizens and others to get insurance coverage easy and seamless. Etherisc and Insurepal are two potential platforms for insurance integration.
+## (Smart) Contracts
+
+In life we have many different contracts that we have signed with others. This module on the Smart City Platform, gives you an overview of all your contracts that are enacted on blockchain-technologies. You can additionally upload and safely store copies of contracts that you scan.
+
+This module also allows you to import the details of any token-based smart contracts you have purchased. In the first version support for Ethereum will be added, and other smart contract platforms might be supported in the future based on user demand.
+
+## Subscriptions
+
+Life in the city often involves subscriptions that have a recurring payment. This module on the Smart City Platform, gives you insight into all subscription contracts you have, either with the city services, or with any other merchant.
+
+Most of the time today, we as citiziens don't know much about the services we subscribe to, what payment and service plans we subscribe to, and others details. Some services only supply some details through regular mail, while others have limited self-service ability through their websites. We need to login at every individuals service, with no easy overview and control.
+
+The promise of the subscriptions module on the platform, is the ability to get better insight into your existing subscriptions, and improved visibility into possible subscriptions available in the city and beyond.
+
+Examples on subscriptions you might have stored on the platform, includes waste services, water services, city-bicycle rental, city-car sharing and more.
+
+## Certifications
+
+Digitizing and verifying academic credentials will be part of the platform. This can be used as a foundation for corporations to validate employment candidates, and it can be used by private or public educators to give cryptographically verifiable certifications.
