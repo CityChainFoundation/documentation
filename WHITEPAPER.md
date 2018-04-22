@@ -30,6 +30,9 @@ Our technical whitepaper, is our Software Architecture Document. This is a livin
   * [\(Smart\) Contracts](#smart-contracts)
   * [Subscriptions](#subscriptions)
   * [Certifications](#certifications)
+- [Tools](#tools)
+  * [Block Explorer](#block-explorer)
+  * [Network Statistics](#network-statistics)
 
 # Background
 
@@ -169,7 +172,7 @@ Part of the Smart City Platform, will be the voting framework, which will enable
 
 The voting framework will be used by the Liberstad Incubator Program (LIP), to allow investors to vote on suggested applications to the incubator program. It will also be used by the City Chain Foundation, allowing individuals who hold City Coins to vote on issues, suggestions and more.
 
-## Property Registery
+## Property Registry
 
 Property registry built on blockchain for property registrations will be part of the Smart City Platform, likely through integration with other existing blockchains built for the specific purpose of property registrations.
 
@@ -203,3 +206,16 @@ Examples on subscriptions you might have stored on the platform, includes waste 
 ## Certifications
 
 Digitizing and verifying academic credentials will be part of the platform. This can be used as a foundation for corporations to validate employment candidates, and it can be used by private or public educators to give cryptographically verifiable certifications.
+
+# Tools
+
+While the majority of software functionality developed on City Chain will be part of either the City Chain blockchain or the Smart City Platform and it's City Hub, there will be some tools that are stand-alone and adds additional value to the City Chain ecosystems.
+
+## Block Explorer
+
+City Chain will host an official block explorer, and we might help with contribution on some of the many various block explores that exists, to make sure they work well with the City Chain blockchain.
+
+## Network Statistics
+
+Based on Grafana, InfluxDB and a specialized version of the full node client, we'll develop a network statistics solution that is similar to [Statoshi](http://statoshi.info/) and [P2SH](https://p2sh.info/).
+
