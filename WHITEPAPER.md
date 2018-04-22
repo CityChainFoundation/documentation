@@ -15,7 +15,7 @@ Our technical whitepaper, is our Software Architecture Document. This is a livin
 - [Accounts and identities](#accounts)
   * [Identities](#identities)
 - [Payments](#payments)
-  * [Send by e-mail](#send-by-email)
+  * [Send by e-mail](#send-by-e-mail)
   * [Send by SMS](#send-by-sms)
   * [Send by NFC](#send-by-nfc)
 - [Wallets](#wallets)
@@ -46,7 +46,7 @@ For global widespread usage of blockchain technology, it has to become the found
     * Perform payments with on-the-fly currency conversion.
 - Full overview through a hub of investements, manage assets (digital and physical).
 - Manage certifications, uploading third party certificates and signing them for digital verification.
-- Property registery with insight into owned land.
+- Property registry with insight into owned land.
 - ... and a lot more, please refer to the [website](https://city-chain.org/) for more details.
 
 # Consensus Algorithm (PoS)
@@ -141,7 +141,7 @@ To do this, this functionality relies on modern technologies available in the la
 
 There is one importan way the secure community on City Chain is very different from every other encrypted and secure communication solution, and that is that the information is by default never stored on any other computer or server than those who are members. By paying a small fee, a community can use full nodes to store encrypted archieves of communities.
 
-##Contacts
+## Contacts
 
 One of today's biggest hurdles for crypto-currencies is the lack of a contact register where a user can easily send funds to either people who are already in their address books, or to other that choose to publicly make their information available.
 
