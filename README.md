@@ -13,3 +13,5 @@ document what already exists, what is being worked on, what is planned and ideas
 * [Roadmap](ROADMAP.md)
 * [Technical White Paper](WHITEPAPER.md)
 * [Development](DEVELOPMENT.md)
+* [Contributing](CONTRIBUTING.md)
+* [Coding Style](CODING-STYLE.md)
