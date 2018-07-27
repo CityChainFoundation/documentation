@@ -9,7 +9,7 @@ Our technical whitepaper, is our Software Architecture Document. This is a livin
 
 **DISCLAIMER:** This City Chain Technical White Paper is for discussion and information purposes only. The information contained herein is subject to change. No part of this draft document is legally binding or enforceable. City Chain Foundation and City Chain developers does not guarantee the accuracy of or the conclusions reached in this white paper, and this white paper is provided “as is”. City Chain Foundation and City Chain developers does not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or noninfringement; (ii) that the contents of this white paper are free from error; and (iii) that such contents will not infringe third-party rights. City Chain Foundation, City Chain developers and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this white paper or any of the content contained herein, even if advised of the possibility of such damages. In no event will City Chain Foundation, City Chain developers or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this white paper or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.
 
-- [Introduction](#introduction)
+- [Introduction](#introduction-by-chief-technology-officer)
 - [Background](#background)
 - [What does it solve](#what-does-it-solve)
 - [Consensus Algorithm \(PoS\)](#consensus-algorithm-pos)
@@ -144,18 +144,10 @@ NFC payments should be possible between two mobile users, and between consumer a
 
 # Wallets
 
-There will be a few rich wallet apps developed for City Chain, and they will all be based on HTML-technologies for UX. This ensures a coherent user experience across the various apps and services on the platform.
+City Hub will be the primary wallet for City Chain. We will be working with third party wallets to enable support for City Coin, 
+but to fully utilize the City Chain and the Smart City Platform, the City Hub is the prefered app.
 
-Technologies: Angular
-
-The wallets will all carry the same name, "City Wallet" (or City Chain/City Coin Wallet) with what edition in parentheses of the name.
-
-City Wallet (Web) - Available through the City Hub interface.  
-City Wallet (Mobile) - Android/iOS (SPV) client, no staking support.   
-City Wallet (Desktop) - Linux/Windows/Mac, full node software with UI that supports staking (PoS).  
-City Wallet (Daemon) - Backend REST service, full node software.  
-
-These wallet apps will be user friendly and give users the basic needs to perform transactions and other related tasks. The full set of City Chain and Smart City Platform functionality, is accessible through the City Hub (website and app).
+Other third party wallet apps give users the basic needs to perform transactions and other related tasks. The full set of City Chain and Smart City Platform functionality, is accessible through the City Hub.
 
 # City Hub
 
@@ -163,9 +155,15 @@ The City Hub is the one-stop-app that citizens, merchants and others can get an 
 
 It will be built on an HTML-based frontend, and be built on Angular.
 
-We might consider releasing the City Hub as both a hosted web app, embedded app (App Stores), full node with UI and daemon.
-
 A user who runs the full node edition of City Hub, will then be able to earn some fees from sharing a configureable amount of disk storage for encrypted data on the Smart City Platform.
+
+City Hub supports different usage modes, and from launch will support both mobile and desktop.
+
+Mobile - Mobile optimized, released to appstores on Android and iOS.
+Light - Light node UI that does not require download of full blockchain.
+Full - Full node UI that support staking, and does a complete verification of the blockchain.
+Point-of-Sale (POS) - Merchant UI that is optimized for touch screen usage.
+Read-only - A more secure mode that allows you to see all your data, without using your private key.
 
 ## Secure Community
 
