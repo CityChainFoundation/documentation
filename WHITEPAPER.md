@@ -1,7 +1,7 @@
 City Chain: Technical White Paper
 -----------------------
 
-**April 21, 2018**
+Updated: **July 27, 2018**
 
 Our technical whitepaper, is our Software Architecture Document. This is a living document that is updated as implementation is completed, and as the architecture and implementation changes.
 
@@ -9,6 +9,7 @@ Our technical whitepaper, is our Software Architecture Document. This is a livin
 
 **DISCLAIMER:** This City Chain Technical White Paper is for discussion and information purposes only. The information contained herein is subject to change. No part of this draft document is legally binding or enforceable. City Chain Foundation and City Chain developers does not guarantee the accuracy of or the conclusions reached in this white paper, and this white paper is provided “as is”. City Chain Foundation and City Chain developers does not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or noninfringement; (ii) that the contents of this white paper are free from error; and (iii) that such contents will not infringe third-party rights. City Chain Foundation, City Chain developers and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this white paper or any of the content contained herein, even if advised of the possibility of such damages. In no event will City Chain Foundation, City Chain developers or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this white paper or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.
 
+- [Introduction](#introduction)
 - [Background](#background)
 - [What does it solve](#what-does-it-solve)
 - [Consensus Algorithm \(PoS\)](#consensus-algorithm-pos)
@@ -33,6 +34,40 @@ Our technical whitepaper, is our Software Architecture Document. This is a livin
 - [Tools](#tools)
   * [Block Explorer](#block-explorer)
   * [Network Statistics](#network-statistics)
+
+
+# Introduction by Chief Technology Officer
+
+The promises of Bitcoin, blockchain and other cryptocurrencies, is not being fully 
+realized in today's society. This is primarily cause by the existing system of economics 
+and trade being tied to fiat currencies, money that is produced and controlled by 
+governments and central banks.
+
+While there are millions of people that hold Bitcoin today, their utilization as money 
+is limited. Most usage require the exchange from Bitcoin, to a local fiat currency that 
+is accepted by a merchant. Gift cards, credit cards and other solutions do help improve 
+this situation, by allowing consumers to more directly exchange digital money, for 
+goods and services, without an implicit exchange to fiat currency.
+
+We believe to gain the full benefit of Bitcoin and blockchain technology, we need to
+establish solutions that works for everyone, that is simple to understand, easy to use,
+and that helps both consumers and merchants alike.
+
+We also believe that the best way to fully gain the benefits, we need to start building
+new cities. New cities that from the ground up have a more  open and free policy of 
+monetary exchange. Most states today, have laws that require the acceptance and usage
+of their fiat money. We think competition and freedom is the way forward, to find
+the most optimal and best solutions for money. We want not only a free market of goods 
+and services, we also want a free market of money.
+
+City Chain is both a blockchain technology, and it is a chain of private cities. 
+We are building City Chain and the Smart City Platform, to enable new private startup 
+cities to have the tools they need, to increase the development speed, reduce costs of 
+planning and operating the city.
+
+**Sondre Bjellås**   
+Chief Technology Officer, City Chain Foundation
+
 
 # Background
 
