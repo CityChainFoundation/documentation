@@ -86,3 +86,10 @@ More partners to be announced in the future.
 
 The goal of City Chain is not to be a competing currency to other cryptocurrencies, but to be an enabler for utilizing blockchain technology and cryptocurrencies at a broader and wider scale than exists today. It is not only about private cities, but the Smart City Platform can be utilize by existing cities and communities, to reduce costs and improve efficiency in some of the services provided to the citizens.
 
+### Announcements
+
+[https://www.reddit.com/r/CityChain/](https://www.reddit.com/r/CityChain/)
+
+[https://bitcointalk.org/index.php?board=159.0](https://bitcointalk.org/index.php?board=159.0)
+
+(This listing will be updated when annoucement is made on the platforms)
