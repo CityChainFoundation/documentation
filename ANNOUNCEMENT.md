@@ -91,3 +91,5 @@ The goal of City Chain is not to be a competing currency to other cryptocurrenci
 [Reddit](https://www.reddit.com/r/CityChain/comments/9z7lkx/anncity_city_chain_blockchain_for_the_smart_city/)
 
 [bitcointalk.org](https://bitcointalk.org/index.php?topic=5073402.0)
+
+[cryptocurrencytalk.com](https://cryptocurrencytalk.com/topic/114297-anncity-city-chain-blockchain-for-the-smart-city-platform/)
