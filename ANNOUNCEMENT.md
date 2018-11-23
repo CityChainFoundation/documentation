@@ -10,7 +10,9 @@ City Chain is the blockchain that powers the Smart City Platform. A decentralize
 
 ### Links
 
-**Website** [https://city-chain.org](https://city-chain.org)
+**Website (City Chain)** [https://city-chain.org](https://city-chain.org)
+
+**Website (City Chain Foundation)** [https://citychain.foundation](https://citychain.foundation)
 
 **Video** [https://www.youtube.com/watch?v=plY5oOoTjz0](https://www.youtube.com/watch?v=plY5oOoTjz0)
 
