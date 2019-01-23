@@ -1,0 +1,106 @@
+[
+  {
+    "command": "stop",
+    "description": "Stops the full node."
+  },
+  {
+    "command": "getrawtransaction <txid> [<verbose>]",
+    "description": "Gets a raw, possibly pooled, transaction from the full node."
+  },
+  {
+    "command": "decoderawtransaction <hex>",
+    "description": "Decodes a serialized transaction hex string into a JSON object describing the transaction."
+  },
+  {
+    "command": "gettxout <txid> <vout> [<includemempool>]",
+    "description": "Gets the unspent outputs of a transaction id and vout number."
+  },
+  {
+    "command": "getblockcount",
+    "description": "Gets the current consensus tip height."
+  },
+  {
+    "command": "getinfo",
+    "description": "Gets general information about the full node."
+  },
+  {
+    "command": "getblockheader <hash> [<isjsonformat>]",
+    "description": "Gets the block header of the block identified by the hash."
+  },
+  {
+    "command": "validateaddress <address>",
+    "description": "Returns information about a bech32 or base58 bitcoin address"
+  },
+  {
+    "command": "getblock <blockhash> [<isjsonformat>]",
+    "description": "Returns the block in hex, given a block hash."
+  },
+  {
+    "command": "addnode <endpointstr> <command>",
+    "description": "Adds a node to the connection manager."
+  },
+  {
+    "command": "getpeerinfo",
+    "description": "Gets peer information from the connection manager."
+  },
+  {
+    "command": "getbestblockhash",
+    "description": "Get the hash of the block at the consensus tip."
+  },
+  {
+    "command": "getblockhash <height>",
+    "description": "Gets the hash of the block at the given height."
+  },
+  {
+    "command": "getrawmempool",
+    "description": "Lists the contents of the memory pool."
+  },
+  {
+    "command": "walletpassphrase <passphrase> <timeout>",
+    "description": "Stores the wallet decryption key in memory for the indicated number of seconds. Issuing the walletpassphrase command while the wallet is already unlocked will set a new unlock time that overrides the old one."
+  },
+  {
+    "command": "walletlock",
+    "description": "Removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call walletpassphrase again before being able to call any methods which require the wallet to be unlocked."
+  },
+  {
+    "command": "sendtoaddress <address> <amount> <commenttx> <commentdest>",
+    "description": "Sends money to an address. Requires wallet to be unlocked using walletpassphrase."
+  },
+  {
+    "command": "sendrawtransaction <hex>",
+    "description": "Submits raw transaction (serialized, hex-encoded) to local node and network."
+  },
+  {
+    "command": "getnewaddress <account> <addresstype>",
+    "description": "Returns a new wallet address for receiving payments."
+  },
+  {
+    "command": "getbalance <accountname> [<minconfirmations>]",
+    "description": "Gets wallets spendable balance."
+  },
+  {
+    "command": "getwalletinfo",
+    "description": "Provides information about the wallet."
+  },
+  {
+    "command": "gettransaction <txid>",
+    "description": "Gets a transaction from the wallet."
+  },
+  {
+    "command": "listunspent [<minconfirmations>] [<maxconfirmations>] [<addressesjson>]",
+    "description": "Returns an array of unspent transaction outputs belonging to this wallet."
+  },
+  {
+    "command": "generate <blockcount>",
+    "description": "Tries to mine a given number of blocks and returns a list of block header hashes."
+  },
+  {
+    "command": "startstaking <walletname> <walletpassword>",
+    "description": "Starts staking a wallet."
+  },
+  {
+    "command": "getstakinginfo [<isjsonformat>]",
+    "description": "Gets the staking information."
+  }
+]
