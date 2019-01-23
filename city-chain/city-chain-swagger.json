@@ -1,0 +1,2244 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "title": "Stratis.Bitcoin.Api"
+    },
+    "paths": {
+        "/api/AddressBook/address": {
+            "post": {
+                "tags": [
+                    "AddressBook"
+                ],
+                "operationId": "ApiAddressBookAddressPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/AddressBookEntryRequest"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "AddressBook"
+                ],
+                "operationId": "ApiAddressBookAddressDelete",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "label",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/AddressBook": {
+            "get": {
+                "tags": [
+                    "AddressBook"
+                ],
+                "operationId": "ApiAddressBookGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "skip",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "take",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Apps/all": {
+            "get": {
+                "tags": [
+                    "Apps"
+                ],
+                "operationId": "ApiAppsAllGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/BlockStore/block": {
+            "get": {
+                "tags": [
+                    "BlockStore"
+                ],
+                "operationId": "ApiBlockStoreBlockGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "Hash",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ShowTransactionDetails",
+                        "in": "query",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "OutputJson",
+                        "in": "query",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/BlockStore/getblockcount": {
+            "get": {
+                "tags": [
+                    "BlockStore"
+                ],
+                "operationId": "ApiBlockStoreGetblockcountGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/ConnectionManager/addnode": {
+            "get": {
+                "tags": [
+                    "ConnectionManager"
+                ],
+                "operationId": "ApiConnectionManagerAddnodeGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "endpoint",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "command",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/ConnectionManager/getpeerinfo": {
+            "get": {
+                "tags": [
+                    "ConnectionManager"
+                ],
+                "operationId": "ApiConnectionManagerGetpeerinfoGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Consensus/getbestblockhash": {
+            "get": {
+                "tags": [
+                    "Consensus"
+                ],
+                "operationId": "ApiConsensusGetbestblockhashGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Consensus/getblockhash": {
+            "get": {
+                "tags": [
+                    "Consensus"
+                ],
+                "operationId": "ApiConsensusGetblockhashGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "height",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Dashboard/Stats": {
+            "get": {
+                "tags": [
+                    "Dashboard"
+                ],
+                "operationId": "DashboardStatsGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Stats": {
+            "get": {
+                "tags": [
+                    "Dashboard"
+                ],
+                "operationId": "StatsGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Dashboard": {
+            "get": {
+                "tags": [
+                    "Dashboard"
+                ],
+                "operationId": "DashboardGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/": {
+            "get": {
+                "tags": [
+                    "Dashboard"
+                ],
+                "operationId": "Get",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Mempool/getrawmempool": {
+            "get": {
+                "tags": [
+                    "Mempool"
+                ],
+                "operationId": "ApiMempoolGetrawmempoolGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Mining/generate": {
+            "post": {
+                "tags": [
+                    "Mining"
+                ],
+                "operationId": "ApiMiningGeneratePost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/MiningRequest"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Mining/stopmining": {
+            "post": {
+                "tags": [
+                    "Mining"
+                ],
+                "operationId": "ApiMiningStopminingPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "corsProtection",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Node/status": {
+            "get": {
+                "tags": [
+                    "Node"
+                ],
+                "operationId": "ApiNodeStatusGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Node/getblockheader": {
+            "get": {
+                "tags": [
+                    "Node"
+                ],
+                "operationId": "ApiNodeGetblockheaderGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "hash",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "isJsonFormat",
+                        "in": "query",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Node/getrawtransaction": {
+            "get": {
+                "tags": [
+                    "Node"
+                ],
+                "operationId": "ApiNodeGetrawtransactionGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "trxid",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "verbose",
+                        "in": "query",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Node/decoderawtransaction": {
+            "post": {
+                "tags": [
+                    "Node"
+                ],
+                "operationId": "ApiNodeDecoderawtransactionPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/DecodeRawTransactionModel"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Node/validateaddress": {
+            "get": {
+                "tags": [
+                    "Node"
+                ],
+                "operationId": "ApiNodeValidateaddressGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Node/gettxout": {
+            "get": {
+                "tags": [
+                    "Node"
+                ],
+                "operationId": "ApiNodeGettxoutGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "trxid",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "vout",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "includeMemPool",
+                        "in": "query",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Node/stop": {
+            "post": {
+                "tags": [
+                    "Node"
+                ],
+                "operationId": "ApiNodeStopPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "corsProtection",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Node/shutdown": {
+            "post": {
+                "tags": [
+                    "Node"
+                ],
+                "operationId": "ApiNodeShutdownPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "corsProtection",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/RPC/callbyname": {
+            "post": {
+                "tags": [
+                    "RPC"
+                ],
+                "operationId": "ApiRPCCallbynamePost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/RPC/listmethods": {
+            "get": {
+                "tags": [
+                    "RPC"
+                ],
+                "operationId": "ApiRPCListmethodsGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Staking/getstakinginfo": {
+            "get": {
+                "tags": [
+                    "Staking"
+                ],
+                "operationId": "ApiStakingGetstakinginfoGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Staking/startstaking": {
+            "post": {
+                "tags": [
+                    "Staking"
+                ],
+                "operationId": "ApiStakingStartstakingPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/StartStakingRequest"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Staking/stopstaking": {
+            "post": {
+                "tags": [
+                    "Staking"
+                ],
+                "operationId": "ApiStakingStopstakingPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "corsProtection",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/mnemonic": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletMnemonicGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "language",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "wordCount",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/create": {
+            "post": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletCreatePost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/WalletCreationRequest"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/load": {
+            "post": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletLoadPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/WalletLoadRequest"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/recover": {
+            "post": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletRecoverPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/WalletRecoveryRequest"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/recover-via-extpubkey": {
+            "post": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletRecover-via-extpubkeyPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/WalletExtPubRecoveryRequest"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/general-info": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletGeneral-infoGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "Name",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/history": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletHistoryGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "WalletName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "AccountName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Skip",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Take",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "SearchQuery",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/balance": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletBalanceGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "WalletName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "AccountName",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/received-by-address": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletReceived-by-addressGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "Address",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/maxbalance": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletMaxbalanceGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "WalletName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "AccountName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "FeeType",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "AllowUnconfirmed",
+                        "in": "query",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/spendable-transactions": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletSpendable-transactionsGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "WalletName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "AccountName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "MinConfirmations",
+                        "in": "query",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/estimate-txfee": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletEstimate-txfeeGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "WalletName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "AccountName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Outpoints",
+                        "in": "query",
+                        "required": false,
+                        "type": "array",
+                        "items": {},
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "name": "Recipients",
+                        "in": "query",
+                        "required": true,
+                        "type": "array",
+                        "items": {},
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "name": "FeeType",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "AllowUnconfirmed",
+                        "in": "query",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "ShuffleOutputs",
+                        "in": "query",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/build-transaction": {
+            "post": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletBuild-transactionPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/BuildTransactionRequest"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/send-transaction": {
+            "post": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletSend-transactionPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/SendTransactionRequest"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/files": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletFilesGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/account": {
+            "post": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletAccountPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/GetUnusedAccountModel"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/accounts": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletAccountsGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "WalletName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/unusedaddress": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletUnusedaddressGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "WalletName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "AccountName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/firstaddress": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletFirstaddressGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "WalletName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "AccountName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/unusedaddresses": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletUnusedaddressesGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "WalletName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "AccountName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Count",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/addresses": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletAddressesGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "WalletName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "AccountName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/remove-transactions": {
+            "delete": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletRemove-transactionsDelete",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "WalletName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ids",
+                        "in": "query",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "name": "all",
+                        "in": "query",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "ReSync",
+                        "in": "query",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/extpubkey": {
+            "get": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletExtpubkeyGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "WalletName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "AccountName",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/sync": {
+            "post": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletSyncPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "model",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/HashModel"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Wallet/syncfromdate": {
+            "post": {
+                "tags": [
+                    "Wallet"
+                ],
+                "operationId": "ApiWalletSyncfromdatePost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/WalletSyncFromDateRequest"
+                        }
+                    },
+                    {
+                        "name": "api-version",
+                        "in": "query",
+                        "description": "The requested API version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "AddressBookEntryRequest": {
+            "required": [
+                "label",
+                "address"
+            ],
+            "type": "object",
+            "properties": {
+                "label": {
+                    "maxLength": 200,
+                    "type": "string"
+                },
+                "address": {
+                    "type": "string"
+                }
+            }
+        },
+        "MiningRequest": {
+            "type": "object",
+            "properties": {
+                "blockCount": {
+                    "format": "int32",
+                    "type": "integer"
+                }
+            }
+        },
+        "DecodeRawTransactionModel": {
+            "type": "object",
+            "properties": {
+                "rawHex": {
+                    "type": "string"
+                }
+            }
+        },
+        "StartStakingRequest": {
+            "required": [
+                "password",
+                "name"
+            ],
+            "type": "object",
+            "properties": {
+                "password": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "WalletCreationRequest": {
+            "required": [
+                "password",
+                "passphrase",
+                "name"
+            ],
+            "type": "object",
+            "properties": {
+                "mnemonic": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "passphrase": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "WalletLoadRequest": {
+            "required": [
+                "password",
+                "name"
+            ],
+            "type": "object",
+            "properties": {
+                "password": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "WalletRecoveryRequest": {
+            "required": [
+                "mnemonic",
+                "password",
+                "passphrase",
+                "name"
+            ],
+            "type": "object",
+            "properties": {
+                "mnemonic": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "passphrase": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "creationDate": {
+                    "format": "date-time",
+                    "type": "string"
+                }
+            }
+        },
+        "WalletExtPubRecoveryRequest": {
+            "required": [
+                "extPubKey",
+                "name"
+            ],
+            "type": "object",
+            "properties": {
+                "extPubKey": {
+                    "type": "string"
+                },
+                "accountIndex": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "creationDate": {
+                    "format": "date-time",
+                    "type": "string"
+                }
+            }
+        },
+        "OutpointRequest": {
+            "required": [
+                "transactionId"
+            ],
+            "type": "object",
+            "properties": {
+                "transactionId": {
+                    "type": "string"
+                },
+                "index": {
+                    "format": "int32",
+                    "type": "integer"
+                }
+            }
+        },
+        "RecipientModel": {
+            "required": [
+                "destinationAddress",
+                "amount"
+            ],
+            "type": "object",
+            "properties": {
+                "destinationAddress": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "string"
+                }
+            }
+        },
+        "BuildTransactionRequest": {
+            "required": [
+                "password",
+                "walletName",
+                "accountName",
+                "recipients"
+            ],
+            "type": "object",
+            "properties": {
+                "feeAmount": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "opReturnData": {
+                    "type": "string"
+                },
+                "singleChangeAddress": {
+                    "type": "boolean"
+                },
+                "walletName": {
+                    "type": "string"
+                },
+                "accountName": {
+                    "type": "string"
+                },
+                "outpoints": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OutpointRequest"
+                    }
+                },
+                "recipients": {
+                    "minLength": 1,
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/RecipientModel"
+                    }
+                },
+                "feeType": {
+                    "type": "string"
+                },
+                "allowUnconfirmed": {
+                    "type": "boolean"
+                },
+                "shuffleOutputs": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "SendTransactionRequest": {
+            "required": [
+                "hex"
+            ],
+            "type": "object",
+            "properties": {
+                "hex": {
+                    "type": "string"
+                }
+            }
+        },
+        "GetUnusedAccountModel": {
+            "required": [
+                "walletName",
+                "password"
+            ],
+            "type": "object",
+            "properties": {
+                "walletName": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "HashModel": {
+            "required": [
+                "hash"
+            ],
+            "type": "object",
+            "properties": {
+                "hash": {
+                    "type": "string"
+                }
+            }
+        },
+        "WalletSyncFromDateRequest": {
+            "type": "object",
+            "properties": {
+                "date": {
+                    "format": "date-time",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
