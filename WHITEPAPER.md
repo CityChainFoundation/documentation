@@ -38,7 +38,7 @@ Our technical whitepaper, is our Software Architecture Document. This is a livin
 
 # Introduction
 
-<img src="https://city-chain.org/images/logo/city-chain-gold-100x.png"
+<img src="img/city-chain-gold-thumb.png"
      alt="City Hub" 
      align="right"
      style="float: right; margin-left: 10px;" />
@@ -160,10 +160,10 @@ Other third party wallet apps give users the basic needs to perform transactions
 
 # City Hub
 
-<img src="https://start.city-chain.org/images/City-Hub-3d-dark.png"
+<img src="img/City-Hub-3d-dark-thumb.png"
      alt="City Hub"
      align="right"
-     style="float: right; margin-left: 10px; width: 50%;" />
+     style="float: right; margin-left: 10px;" />
      
 The City Hub is the one-stop-app that citizens, merchants and others can get an overview of everything related to their data on the City Chain and the Smart City Platform.
 
