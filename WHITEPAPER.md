@@ -3,7 +3,7 @@ City Chain: Technical White Paper
 
 Updated: **July 27, 2018**
 
-Our technical whitepaper, is our Software Architecture Document. This is a living document that is updated as implementation is completed, and as the architecture and implementation changes.
+Our technical whitepaper, is our Software Architecture Document. This is a living document that is updated as implementations of features and services is completed, and as the architecture and implementation changes.
 
 **ABSTRACT:** City Chain is a new blockchain and platform, Smart City Platform, that has the purpose of making the technology accessible and useable by everyone. Cities and citizens will be able to use the City Chain to improve how we communicate, socialize, trade and manage our assets (both physical and digital). In addition, it will be possible to reduce costs/overhead for both citizens and cities.
 
@@ -36,7 +36,13 @@ Our technical whitepaper, is our Software Architecture Document. This is a livin
   * [Network Statistics](#network-statistics)
 
 
-# Introduction by Chief Technology Officer
+# Introduction
+
+<img src="https://city-chain.org/images/logo/city-chain-gold-100x.png"
+     alt="City Hub"
+     style="float: right; margin-left: 10px;" />
+
+We believe in improving every citizen's quality of life. That is why we are building City Chain and the Smart City Platform.
 
 The promises of Bitcoin, blockchain and other cryptocurrencies, is not being fully 
 realized in today's society. This is primarily cause by the existing system of economics 
@@ -65,8 +71,10 @@ We are building City Chain and the Smart City Platform, to enable new private st
 cities to have the tools they need, to increase the development speed, reduce costs of 
 planning and operating the city.
 
+The first application of City Chain, is the City Coin (CITY) cryptcurrency.
+
 **Sondre Bjellås**   
-Chief Technology Officer, City Chain Foundation
+Chief Technology Officer, City Chain Labs
 
 
 # Background
@@ -88,17 +96,17 @@ For global widespread usage of blockchain technology, it has to become the found
 - ... and a lot more, please refer to the [website](https://city-chain.org/) for more details.
 
 # Consensus Algorithm (PoS)
-City Chain will utilize Proof-of-Stake as oppose to Proof-of-Work (Bitcoin). We do this for a number of reasons:
+City Chain utilize Proof-of-Stake as oppose to Proof-of-Work (Bitcoin). We do this for a number of reasons:
 
 * Reduce the demand for electric energy and hardware investements for stakers ("miners").
 * Deterministic block interval.
 * Avoid competition with Bitcoin and other blockchains for the available PoW-hashpower.
 
-City Chain will use version 3 of PoS, possibly with some modifications. City Chain commits to keep investigating and following the development of PoS consensus algorithms and perform upgrades and modifications in the future. This might result in soft- and/or hard-forks. Modifications to the PoS algorithms will be done to ensure the stability, safety and security of the blockchain-network.
+City Chain use version 3 of PoS. City Chain commits to keep investigating and following the development of PoS consensus algorithms and perform upgrades and modifications in the future. This might result in soft- and/or hard-forks. Modifications to the PoS algorithms will be done to ensure the stability, safety and security of the blockchain-network.
 
 # Accounts
 
-Accounts on the City Chain and Smart City Platform, is the same as most blockchains today. By relying on a 12 or 24 word mnemonic which will act as the seed for derived private/public key pairs, you can access all your data, coins and information.
+Accounts on the City Chain and Smart City Platform, is the same as most blockchains today. By relying on a 12 word recovery phrase (mnemonic) which will act as the seed for derived private/public key pairs, you can access all your data, coins and information.
 
 # Identities
 
@@ -151,19 +159,23 @@ Other third party wallet apps give users the basic needs to perform transactions
 
 # City Hub
 
+<img src="https://start.city-chain.org/images/City-Hub-3d-dark.png"
+     alt="City Hub"
+     style="float: right; margin-left: 10px; width: 50%;" />
+     
 The City Hub is the one-stop-app that citizens, merchants and others can get an overview of everything related to their data on the City Chain and the Smart City Platform.
 
-It will be built on an HTML-based frontend, and be built on Angular.
+City Hub is a HTML-based frontend, and is built on Angular.
 
 A user who runs the full node edition of City Hub, will then be able to earn some fees from sharing a configureable amount of disk storage for encrypted data on the Smart City Platform.
 
-City Hub supports different usage modes, and from launch will support both mobile and desktop.
+City Hub supports different usage modes, and from launch supported desktop and mobile support is coming in a future update.
 
-Mobile - Mobile optimized, released to appstores on Android and iOS.
-Light - Light node UI that does not require download of full blockchain.
-Full - Full node UI that support staking, and does a complete verification of the blockchain.
-Point-of-Sale (POS) - Merchant UI that is optimized for touch screen usage.
-Read-only - A more secure mode that allows you to see all your data, without using your private key.
+- Mobile - Mobile optimized, released to appstores on Android and iOS.
+- Light - Light node UI that does not require download of full blockchain.
+- Full - Full node UI that support staking, and does a complete verification of the blockchain.
+- Point-of-Sale (POS) - Merchant UI that is optimized for touch screen usage.
+- Read-only - A more secure mode that allows you to see all your data, without using your private key.
 
 ## Secure Community
 
@@ -246,9 +258,29 @@ While the majority of software functionality developed on City Chain will be par
 
 ## Block Explorer
 
-City Chain will host an official block explorer, and we might help with contribution on some of the many various block explores that exists, to make sure they work well with the City Chain blockchain.
+City Chain Labs is hosting an official block explorer, and we might help with contribution on some of the many various block explores that exists, to make sure they work well with the City Chain blockchain.
+
+[https://explorer.city-chain.org/](https://explorer.city-chain.org/)
+
+## Insight
+
+City Chain Labs is hosting and developing a dashboard and API that is made available to the community and users to gain insight in the economics behind City Coin.
+
+City Chain Insight will provide details such as circulating supply, total supply, daily market volume, average market prices and more.
+
+[https://insight.city-chain.org/](https://insight.city-chain.org/)
+
+## Get started
+
+A website that is easier for new users to quickly learn about City Chain is developed and made available.
+
+[https://start.city-chain.org/](https://start.city-chain.org/)
 
 ## Network Statistics
 
 Based on Grafana, InfluxDB and a specialized version of the full node client, we'll develop a network statistics solution that is similar to [Statoshi](http://statoshi.info/) and [P2SH](https://p2sh.info/).
 
+## Version History
+
+- Draft #2: February 6, 2019
+- Draft #1: July 27, 2018
