@@ -1,7 +1,8 @@
 City Chain: White Paper
 -----------------------
 
-Updated: **July 27, 2018**
+Updated: **February 6, 2019**   
+Version: **Draft 2**   
 
 Our whitepaper, is our Software Architecture Document. This is a living document that is updated as implementations of features and services is completed, and as the architecture and implementation changes.
 
@@ -284,5 +285,5 @@ Based on Grafana, InfluxDB and a specialized version of the full node client, we
 
 ## Version History
 
-- Draft #2: February 6, 2019
-- Draft #1: July 27, 2018
+- Draft 2: February 6, 2019
+- Draft 1: July 27, 2018
