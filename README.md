@@ -15,6 +15,7 @@ If you discover a bug or other problem with City Chain or City Hub, please repor
 
 * [Roadmap](ROADMAP.md)
 * [Technical White Paper](WHITEPAPER.md)
+* [Coinbase Rewards](COINBASE.md)
 * [Development](DEVELOPMENT.md)
 * [Contributing](CONTRIBUTING.md)
 * [Coding Style](CODING-STYLE.md)
