@@ -20,7 +20,7 @@ City Chain is the blockchain that powers the Smart City Platform. A decentralize
 
 **Discord** [https://discord.gg/CD8CTJt](https://discord.gg/CD8CTJt)
 
-**Telegram** [https://t.me/citychain](https://t.me/citychain)
+**Telegram** [https://t.me/+UPANGuRun-XxS5zu](https://t.me/+UPANGuRun-XxS5zu)
 
 ### Wallets
 
