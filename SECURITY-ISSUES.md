@@ -6,7 +6,7 @@ that is developed by the City Chain Foundation, please make sure you report the 
 
 
 
-Please report security issues by using [Security Advisories on GitHub](https://github.com/CityChainFoundation/city-chain/security/advisories), or by e-mail, to the address provided at the [City Chain Foundation website](https://www.citychain.foundation/). You will find the PGP finger-print at the bottom of the website.
+Please report security issues by using [Security Advisories on GitHub](https://github.com/CityChainFoundation/city-chain/security/advisories), or by e-mail, to the address provided at the [City Chain website](https://www.city-chain.org/). You will find the PGP finger-print at the bottom of the website.
 
 We thank you for your consideration in reporting any security issues in a responsible and timely manner, allowing the 
 developers to fix the bugs and problems before they result in serious issues for our users.

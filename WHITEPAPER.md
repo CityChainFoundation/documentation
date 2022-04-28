@@ -78,7 +78,7 @@ In order to encourage global widespread usage of blockchain technology, it has t
 - Full overview and management of investments and assets (digital and physical)
 - Management of certifications, the uploading of third party certificates and signing them for digital verification.
 - Property registry and details about owned land.
-- ...and much more, please refer to the [website](https://city-chain.org/) for more details.
+- ...and much more, please refer to the [website](https://www.city-chain.org/) for more details.
 
 # Consensus Algorithm (PoS)
 City Chain utilizes Proof-of-Stake as oppose to Proof-of-Work (Bitcoin). We do this for a number of reasons:
@@ -234,15 +234,9 @@ While the majority of software functionality developed on City Chain will be par
 
 City Chain Labs has launched an official block explorer. We plan to contribute to various existing block explorers to ensure that they integrate well with the City Chain blockchain.
 
+The explorer provides details such as circulating supply, total supply, current market prices, and more. 
+
 [https://explorer.city-chain.org/](https://explorer.city-chain.org/)
-
-## Insight
-
-City Chain Labs is developing a dashboard and API for community use. It allows users to gain insight into up to date economics behind City Coin.
-
-City Chain Insight will provide details such as circulating supply, total supply, daily market volume, average market prices, and more. 
-
-[https://insight.city-chain.org/](https://insight.city-chain.org/)
 
 ## Get started
 

@@ -2,15 +2,13 @@
 
 City Chain is the blockchain that powers the Smart City Platform. A decentralized platform empowering global citizens in the modern era. City Coin (CITY) is the means of value exchange, yet the Smart City Platform will be supporting multiple cryptocurrencies (including Bitcoin) as a means for payments and other operations.
 
-![City Chain logo](https://city-chain.org/images/logo/city-chain-gold-100x.png)
+![City Chain logo](https://www.city-chain.org/images/logo/city-chain-gold-100x.png)
 
 “Our goal is to make crypto-currencies and crypto-services available to, and used by, everyone.”
 
 ### Links
 
-**Website (City Chain)** [https://city-chain.org](https://city-chain.org)
-
-**Website (City Chain Foundation)** [https://citychain.foundation](https://citychain.foundation)
+**Website (City Chain)** [https://www.city-chain.org](https://www.city-chain.org)
 
 **Video** [https://www.youtube.com/watch?v=plY5oOoTjz0](https://www.youtube.com/watch?v=plY5oOoTjz0)
 
